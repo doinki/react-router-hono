@@ -1,0 +1,65 @@
+{
+  "name": "react-router-hono",
+  "version": "0.0.0",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "packageManager": "pnpm@9.15.2",
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "release": "pnpm run build && publint && changeset publish",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "hono": "^4.0.0",
+    "react-router": "^7.0.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.11",
+    "@types/node": "^20.17.11",
+    "hono": "^4.6.16",
+    "publint": "^0.2.12",
+    "react-router": "^7.1.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "author": {
+    "email": "doinki94@gmail.com",
+    "name": "doinki",
+    "url": "https://github.com/doinki"
+  },
+  "bugs": "https://github.com/doinki/react-router-hono/issues",
+  "homepage": "https://github.com/doinki/react-router-hono#readme",
+  "keywords": [
+    "react-router",
+    "hono"
+  ],
+  "repository": {
+    "url": "git+https://github.com/doinki/react-router-hono.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

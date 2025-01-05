@@ -1,0 +1,5 @@
+---
+"react-router-hono": minor
+---
+
+🎉
